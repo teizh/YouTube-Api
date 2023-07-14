@@ -10,14 +10,13 @@ android {
 
     defaultConfig {
         applicationId "com.example.youtube_api"
-        minSdk 24
+        minSdk 27
         targetSdk 33
         versionCode 1
         versionName "1.0"
 
-/*        buildConfigField "String", "API_KEY", "\"AIzaSyDIUttqi6h6E0-YeHRl7pEb7cem7y0qhNY\""
-       buildConfigField "String", "BASE_URL", "\"https://www.googleapis.com/youtube/v3/\""*/
-
+        buildConfigField "String", "API_KEY", "\"AIzaSyDIUttqi6h6E0-YeHRl7pEb7cem7y0qhNY\""
+        buildConfigField "String", "BASE_URL", "\"https://www.googleapis.com/youtube/v3/\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -35,7 +34,7 @@ android {
         jvmTarget = '17'
     }
     buildFeatures {
-     /* buildConfig = true*/
+        buildConfig = true
         viewBinding true
     }
 }
@@ -50,6 +49,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
     implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.media3:media3-exoplayer:1.1.0'
 
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
@@ -61,6 +61,11 @@ dependencies {
     // Lifecycle
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation("io.coil-kt:coil:2.4.0")
+
+    // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1"
 
     // Interceptor
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")

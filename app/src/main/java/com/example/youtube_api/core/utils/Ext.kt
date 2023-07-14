@@ -1,1 +1,1 @@
-package com.example.youtube_api.core.utilsimport android.widget.ImageViewimport com.bumptech.glide.Glidefun ImageView.loadImage(image:String) {    Glide.with(this).load(image).into(this)}
+package com.example.youtube_api.core.utilsimport android.widget.ImageViewimport com.bumptech.glide.Glideimport com.bumptech.glide.annotation.GlideModuleimport com.bumptech.glide.module.AppGlideModule
